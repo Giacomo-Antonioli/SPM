@@ -1,0 +1,3 @@
+C:/Users/giaco/Documents/SPM/cmake-build-debug/CMakeFiles/SPM.dir
+C:/Users/giaco/Documents/SPM/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/giaco/Documents/SPM/cmake-build-debug/CMakeFiles/rebuild_cache.dir
