@@ -10,6 +10,10 @@ Node::Node(const int id, const int input_arity, const int output_arity){
     Node::output_arity=output_arity;
     Node::inputs.resize(input_arity);
     Node::outputs.resize(output_arity);
+    Node::input_vars.resize(input_arity);
+    Node::output_vars.resize(output_arity);
+    Node:inputs[0]=5;
+
 
 }
 void Node::addDep(Node *addedNode) {
@@ -18,9 +22,6 @@ void Node::addDep(Node *addedNode) {
 
 void Node::addCompute(std::function<void(void)> to_be_added){
     Node::to_compute=to_be_added;
-}
-
-void Node::fetch_inputs() {
 
 }
 

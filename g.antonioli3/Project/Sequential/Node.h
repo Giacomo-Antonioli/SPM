@@ -6,7 +6,7 @@
 #include <functional>
 #ifndef SPM_NODE_H
 #define SPM_NODE_H
-
+#include "shared_queue.cpp"
 
 class Node {
 private:
@@ -16,10 +16,14 @@ private:
     std::vector<Node*> dependecy_node_list;
     std::function<void(void)> to_compute;
 
+
 public:
     std::vector<int> inputs;
     std::vector<int> outputs;
-
+    int inner_counter=0;
+    int inner_counter_output=0;
+    std::vector<sharedQueue<float> *> output_vars;
+    std::vector<sharedQueue<float> *> input_vars;
     Node(const int id = 0, const int input_arity = 1, const int output_arity = 1);
     void addDep(Node* addedNode);
     void addCompute(std::function<void(void)> to_be_added);
@@ -30,9 +34,6 @@ public:
     int  getElement_outputs(int index){
         return Node::outputs[index];
     }
-
-    void fetch_inputs();
-
     int getId() const;
 
     void setId(int id);

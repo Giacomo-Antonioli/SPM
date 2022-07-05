@@ -10,25 +10,27 @@
 #define SPM_GRAPH_H
 
 
-
 class Graph {
 public:
 
 
 private:
-    std::vector<Node*> node_list;
-    int output_sum=0;
+    std::vector<Node *> node_list;
+    int output_sum = -1;
+
 
 public:
     void addNode(Node *node_to_be_added);
+
     void generateStruct();
+
     void compute();
 
+    float result;
 
-
+    void parallel_compute(int i);
 
 };
-
 
 
 #endif //SPM_GRAPH_H

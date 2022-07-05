@@ -15,6 +15,7 @@ int main() {
     int res;
 
     std::cout << "Compiling" << std::endl;
+
 /*
     Node A(1,1,3);
     Node B(2,1,1);
